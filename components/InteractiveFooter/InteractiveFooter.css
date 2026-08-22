@@ -1,0 +1,37 @@
+.interactive-footer {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  background-color: #0f0f0f;
+  overflow: hidden;
+}
+
+.interactive-footer canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.interactive-footer img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 80%;
+
+  object-fit: contain;
+
+  visibility: hidden;
+}
+
+@media (max-width: 1000px) {
+  .interactive-footer canvas {
+    display: none;
+  }
+
+  .interactive-footer img {
+    visibility: visible;
+  }
+}
